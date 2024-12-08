@@ -1,0 +1,140 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom right, #ff7eb3, #ff65a3, #ff3e6c); /* Beautiful gradient */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align content from the top */
+    min-height: 100vh; /* Ensure the body height is at least the viewport height */
+    padding: 20px 0; /* Add padding for top and bottom margins */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-y: scroll; /* Enable vertical scrolling */
+    color: #333;
+    text-align: center;
+}
+
+/* Smooth scrolling behavior for a polished feel */
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #ff4b73;
+    border-radius: 10px;
+}
+
+body {
+    scroll-behavior: smooth; /* Add smooth scrolling for better UX */
+}
+
+/* Container for all content */
+#content-container {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 700px;
+    width: 90%;
+    margin: 40px auto; /* Margin to add space at the top and bottom */
+    animation: fadeIn 1s ease-in-out;
+    overflow: hidden; /* Prevent any unexpected overflow */
+}
+
+/* Keyframe for fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Title for the page */
+h1 {
+    font-size: 2.5rem;
+    color: #ff4b73;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Soft shadow for title */
+}
+
+/* Styling for the voice message sections */
+.message-container {
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+audio {
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.poem {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    font-style: italic;
+    color: #555;
+    max-width: 600px;
+    margin: 10px auto;
+}
+
+/* Button styling */
+button {
+    font-size: 1.1rem;
+    padding: 12px 25px;
+    margin-top: 30px;
+    background-color: #ff4b73;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #ff244c;
+    transform: scale(1.05);
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .poem {
+        font-size: 1rem;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}

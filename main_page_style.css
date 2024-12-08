@@ -1,0 +1,172 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom right, #ff7eb3, #ff65a3, #ff3e6c); /* Beautiful gradient */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align from the top, not center */
+    min-height: 100vh; /* Ensure body stretches to full viewport height */
+    padding: 20px 0; /* Add padding to the top and bottom */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-y: auto; /* Allow vertical scrolling */
+    text-align: center;
+    color: #333;
+    animation: fadeIn 1.5s ease-in-out; /* Fade-in animation for page load */
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Welcome container */
+#welcome-container {
+    background: rgba(255, 255, 255, 0.85); /* Slightly opaque background for contrast */
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    max-width: 650px;
+    margin: 20px auto; /* Top and bottom margins */
+    animation: slideUp 1s ease-in-out; /* Animation for container appearance */
+}
+
+/* Keyframes for sliding up animation */
+@keyframes slideUp {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Main heading */
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Soft shadow */
+}
+
+/* Subheading */
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #fc0000;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Paragraph text */
+p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin: 15px 0;
+    color: #333;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* Italicized text for added elegance */
+p.italic {
+    font-style: italic;
+    color: #666;
+    font-size: 1.1rem;
+}
+
+/* Button styling */
+button {
+    font-size: 1.1rem;
+    padding: 12px 25px;
+    margin-top: 30px;
+    background-color: #ff4b73;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #ff244c;
+    transform: scale(1.05); /* Subtle scaling effect */
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Styling for timeline section */
+#timeline {
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.event h3 {
+    font-size: 1.5rem;
+    color: #ff4b73;
+}
+
+.event p {
+    font-size: 1.2rem;
+    color: #555;
+    margin: 10px 0;
+}
+
+/* Styling for compliments section */
+#compliments {
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#compliments h2 {
+    font-size: 1.5rem;
+    color: #ff4b73;
+}
+
+#compliment-output {
+    font-size: 1.2rem;
+    color: #333;
+    margin-top: 15px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}

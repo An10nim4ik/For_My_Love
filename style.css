@@ -1,0 +1,94 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #ff9ff3, #a29bfe, #74b9ff); /* Beautiful gradient */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+/* Slider Container */
+#slider-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* The actual slider */
+#slider {
+    display: flex;
+    transition: transform 0.5s ease;
+    cursor: grab;
+}
+
+/* Images inside the slider */
+#slider img {
+    width: 100%;  /* Display one image at a time */
+    max-height: 50vw; /* Maintain aspect ratio */
+    object-fit: contain;  /* Maintain aspect ratio without distortion */
+    transition: transform 0.3s ease; /* Smooth transition */
+    flex-shrink: 0;  /* Prevent images from shrinking */
+}
+
+/* Adjust the back button position */
+#back-button {
+    position: absolute;
+    top: 20px; /* Moved higher to avoid overlapping with text */
+    left: 20px;
+    padding: 10px 20px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 10;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#back-button:hover {
+    background-color: #e64a19;
+    transform: scale(1.05);
+}
+
+#back-button:focus {
+    outline: 2px solid white;
+    transform: scale(1.05);
+}
+
+#my-love-title {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+#my-love-description {
+    position: absolute;
+    top: 70px; /* Position below the title */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
