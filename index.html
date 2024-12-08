@@ -1,25 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="kk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Draggable Photo Slider</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <title>Welcome, My Love</title>
+    <link rel="stylesheet" href="styles/main_page_style.css">
 </head>
 <body>
-    <!-- Back button -->
-    <button id="back-button" onclick="window.location.href='main_page.html'">← Back to Main Page</button>
+    <div id="welcome-container">
+        <h1>Привет, Моя Любовь ❤️</h1>
+        <h2>С днём рождения!</h2>
+        <p>
+            Жаным менің, Тұылған күнің құтты болсын! <br>
+            Мен Сені өте қатты жақсы көремін! <br>
+            Өмірімнің толығымен саған арнауға дайынмын. <br>
+            Сен өте сыпайы, әдемі, сүйкімді әрі ақылды жансың. <br>
+            Сені сипаттайтын сөз жетпес, <br>
+            Өмірізде сонша сөз айтуға уақыт жетпес! <br>
+            Махаббатымыз жүректерімізден ешқайда кетпес, <br>
+            Екеуміздің бақытымызға ештеңе жетпес!
+        </p>
+        <p class="italic">
+            Ты Моя Любовь на все времена, Мы прошли через многое, 
+        </p>
+        <p class="italic">
+            но Я уверен, что Ты и Я пройдем через все трудности,
+        </p>
+        <p class="italic">
+            одолеем все преграды. И в конце будем жить счастливо и вместе всю жизнь!
+        </p>
+        <section id="timeline">
+            <h2>Наш Путь Вместе</h2>
+            <div class="event">
+                <h3>Первая Встреча</h3>
+                <p>Мы встретились 17 мая! Это был день, который навсегда изменил мою жизнь. ❤️</p>
+            </div>
+            <div class="event">
+                <h3>Первое Свидание</h3>
+                <p>Помнишь 27 мая и наше первое свидание? Этот день был незабываемым!</p>
+            </div>
+            <div class="event">
+                <h3>Встреча после Разлуки</h3>
+                <p>2 сентября мы наконец встретились после 2,5 месяцев разлуки. Это был невероятно счастливый день, когда мы снова были вместе. 🥰</p>
+            </div>
+        </section>
+        <section id="compliments">
+            <h2>Нажми и получи комплимент 😊</h2>
+            <button onclick="generateCompliment()">Получить Комплимент</button>
+            <p id="compliment-output" style="margin-top: 20px;"></p>
+        </section>
+        
+        
+        <button id="go-to-slider" onclick="goToSlider()">See Our Memories</button>
+        <button id="go-to-voice-poems" onclick="goToVoicePoems()">Voice Messages and Poems</button>
 
-    <!-- My Love text -->
-    <p id="my-love-title">Memories with My Love</p>
-<p id="my-love-description">Тут все наши моменты с начала нашего знакомства</p>
-
-
-    <!-- Slider container -->
-    <div id="slider-container">
-        <div id = "slider"></div>
     </div>
 
-    <script src="scripts/script.js"></script>
+    <script>
+        function goToSlider() {
+            window.location.href = "main_page.html";
+        }
+        function goToVoicePoems() {
+            window.location.href = "voice_and_poems.html"; 
+        }
+    </script>
+    <script src="scripts/main_page_script.js"></script>
 </body>
 </html>
