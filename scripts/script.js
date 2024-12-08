@@ -8,7 +8,7 @@ const slider = document.getElementById('slider');
 
 async function fetchMedia() {
     try {
-        const response = await fetch('http://localhost:5000/get_media');
+        const response = await fetch('http://127.0.0.1:5001/get_media');
         const data = await response.json();
 
         // Shuffle the images randomly
